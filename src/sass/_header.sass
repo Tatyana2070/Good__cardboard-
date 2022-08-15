@@ -1,0 +1,42 @@
+.header
+  &-logo
+    background: url(../img/logo.webp) center no-repeat
+    background-size: 100%
+    width: 191px
+    height: 61px
+  padding-bottom: 15px
+  padding-top: 60px
+  &-contacts
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    &__phone
+      &s
+        display: flex
+      font-size: 22px
+      margin-right: 13px
+      color: #373737
+      font-weight: 400
+      
+      &:first-child
+          border-right: 1px solid #cfcfd0
+          padding-right:  13px
+
+@keyframes move
+  from
+    opacity: 0
+    margin-bottom: -100px
+  to
+    opacity: 1
+    margin-bottom: 0px
+    
+
+.animate 
+  animation-name: move
+  animation-duration: 1s
+      
+
+ 
+
+  
+    

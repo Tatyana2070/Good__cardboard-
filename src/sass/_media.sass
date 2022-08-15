@@ -1,0 +1,556 @@
+@media screen and ( max-width: 576px )
+  .hidden-mobile
+    display: none
+  //меню
+  .menu
+    margin-top: 21px
+    &-text
+      display: flex
+      flex-direction: column
+      position: fixed
+      width: 100vw
+      height: 100vw
+      background-color: #464646
+      transition: all 0.5s
+      left: -100vw
+      &_active
+        left: 0
+      a 
+        margin-top: 35px
+        letter-spacing: 3px
+        transition: all 0.2
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+        &:hover
+          display: block
+          width: 100vw
+          text-decoration: underline
+    &-link
+      color: $text-color-dark
+      z-index: 9
+      display: block 
+      width: 6px
+      height: 60px
+      background-color: transparent
+      border-radius: 50%
+      border: none
+      position: fixed
+      top: 5px
+      left: -2px
+      span, span:before, span:after
+        display: block
+        height: 3px
+        width: 30px
+        position: absolute
+        left: 50%
+        margin-left: -15px
+        top: 50%
+        margin-top: -1px
+        background-color: #333
+      span:before 
+        transition: all 0.2s
+        content: ''
+        margin-top: -10px
+      span:after
+        transition: all 0.2s
+        content: ''
+        margin-top: 6px
+      &_active span
+        background-color: transparent
+        &:before 
+          transform: rotate(135deg) 
+          margin-top: 0
+        &:after
+          transform: rotate(-135deg) 
+          margin-top: 0
+  //шапка
+  .header
+    margin-top: -45px
+    &-logo
+      background: url(../img/logo-phone.webp) center no-repeat
+      width: 35px
+      height: 35px
+      margin-left: 50px
+    &-contacts
+      &__phone
+        &s 
+          flex-direction: column
+        font-size: 14px
+        margin-right: 0
+        font-size: 15px
+        span
+          font-weight: 900
+        &:first-child
+          border: none
+      &__button
+        display: inline-block
+        padding: 9px
+  .main
+    text-align: center
+    padding-top: 50px
+    button
+      font-size: 18px
+      padding: 20px 35px
+    &-text 
+      &__title
+        font-size: 25px
+        color: $active-color
+      &__subtitle
+        font-size: 20px
+        font-weight: 400
+        margin-bottom: 40px
+      &__form
+        background-color: transparent
+        padding: 10px 
+  .form
+    display: block
+    &-title 
+      padding-right: 0
+      font-size: 19px
+      line-height: 1.4
+      &__important
+        margin-top: 10px
+    &__input
+      display: block
+      margin: auto
+      width: 100%
+    button
+      margin-top: 20px
+  // фичи
+  .features
+    .numbers
+      margin-top: -30px
+      &-block
+        margin-bottom: 20px
+    &-block
+      &__title
+        font-weight: 900
+        font-size: 17px
+      &__descr
+        line-height: 1.5    
+      &s
+        flex-direction: column
+        margin-bottom: -30px
+      margin-top: -20px
+    text-align: justify
+  // продукты
+  .products
+    &-block
+      &__title
+        font-size: 20px
+        margin-bottom: 16px
+  // предложение
+  .offer
+    margin-top: -60px
+    text-align: center
+    button
+      font-size: 18px
+      padding: 20px 35px
+      margin-top: 20px
+    &-title
+      margin-top: -5px
+      font-size: 23px
+      font-weight: 700
+      &_small
+        font-size: 18px
+        font-weight: 400
+        margin-top: 10px
+    &-form
+      &__label 
+        font-size: 15px
+        margin-top: 40px
+        margin-bottom: 30px
+  // производство
+  .production
+    margin-top: -70px
+    margin-bottom: 100px
+    &-text
+      &__title
+        margin-left: -20px
+        padding-right: 30px
+        width: 110%
+        font-weight: 700
+        font-size: 23px
+        text-align: center
+      &__descr
+        text-align: justify 
+        margin-top: -10px
+    &-slider_top
+      margin-top: 30px
+  .clients
+    margin-top: -250px
+    margin-bottom: 0px
+    &-pictures
+      margin-top: 100px
+  //отзывы
+  .feedback
+    h1 
+      font-size: 25px
+      margin-top: -12px
+  //карта
+  .contacts
+    padding: 10px
+    margin-top: -125px
+    text-align: center
+    &-block 
+      background: transparent
+      h2
+        color: $text-color-dark
+        font-size: 27px
+      &__title 
+        font-size: 21px
+        &_tel 
+          line-height: 1.8
+      button
+        font-size: 18px
+        padding: 20px 35px
+    .map
+      margin-top: 100px
+      &-img 
+        width: 95%
+  //футер
+  .footer
+    &-text 
+      font-size: 12px
+  //модальное окно
+  .overlay
+    .popup
+      top: 50px
+      width: 330px
+      &-title 
+        font-weight: 700
+      &-form
+        padding-left: 30px
+        padding-right: 30px
+        &-header
+          font-size: 23px
+          font-weight: 400
+          line-height: 27px
+          span
+            font-size: 18px
+        &__label
+          font-size: 16px
+        &__input
+          width: 260px
+          height: 56px
+          margin-top: 5px
+        &__btn
+          margin-top: 30px
+  //Оформление заголовка
+  .section
+   &-title
+    margin-bottom: 0
+    margin-top: -30px
+    &::after 
+      background: transparent
+
+@media screen and (min-width : 576px) and ( max-width: 768px )
+  .hidden-mobile
+    display: none
+  .menu
+    margin-top: 21px
+    &-text
+      display: flex
+      flex-direction: column
+      position: fixed
+      width: 100vw
+      height: 60vw
+      background-color: #464646
+      transition: all 0.5s
+      left: -100vw
+      &_active
+        left: 0
+      a 
+        margin-top: 35px
+        letter-spacing: 3px
+        transition: all 0.2
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+        &:hover
+          display: block
+          width: 100vw
+          text-decoration: underline
+    &-link
+      color: $text-color-dark
+      z-index: 9
+      display: block 
+      width: 6px
+      height: 60px
+      background-color: transparent
+      border-radius: 50%
+      border: none
+      position: fixed
+      top: 7px
+      left: 20px
+      span, span:before, span:after
+        display: block
+        height: 4px
+        width: 40px
+        position: absolute
+        left: 50%
+        margin-left: -20px
+        top: 50%
+        margin-top: -1px
+        background-color: #333
+      span:before 
+        transition: all 0.2s
+        content: ''
+        margin-top: -15px
+      span:after
+        transition: all 0.2s
+        content: ''
+        margin-top: 11px
+      &_active span
+        background-color: transparent
+        &:before 
+          transform: rotate(135deg) 
+          margin-top: 0
+        &:after
+          transform: rotate(-135deg) 
+          margin-top: 0
+  .header
+    margin-top: -45px
+    &-logo
+      background: url(../img/logo-phone.webp) center no-repeat
+      width: 115px
+      height: 35px
+      margin-left: 0px
+    &-contacts
+      &__phone
+        &s 
+          flex-direction: column
+        font-size: 14px
+        font-size: 19px
+        span
+          font-weight: 900
+        &:first-child
+          border: none
+      &__button
+        display: inline-block
+        padding: 9px
+      button
+        margin-right: -30px
+        width: 50px
+        height: 50px
+  .main
+    text-align: center
+    padding-top: 50px
+    button
+      font-size: 18px
+      padding: 20px 35px
+    &-text 
+      &__title
+        font-size: 25px
+        color: $active-color
+      &__subtitle
+        font-size: 20px
+        font-weight: 400
+        margin-bottom: 40px
+      &__form
+        background-color: transparent
+        padding: 10px 
+  .form
+    display: block
+    &-title 
+      padding-right: 0
+      font-size: 19px
+      line-height: 1.4
+      &__important
+        margin-top: 10px
+    &__input
+      display: block
+      margin: auto
+      width: 100%
+    button
+      margin-top: 20px
+  .overlay
+    .popup
+      top: 150px
+      width: 530px
+      &-title 
+        font-weight: 700
+      &-form
+        padding-left: 30px
+        padding-right: 30px
+        &-header
+          font-size: 23px
+          font-weight: 400
+          line-height: 27px
+          span
+            font-size: 18px
+        &__label
+          font-size: 18px
+        &__input
+          width: 260px
+          height: 56px
+          margin-top: 5px
+        &__btn
+          margin-top: 30px
+  .offer
+    margin-top: -60px
+    text-align: center
+    button
+      font-size: 18px
+      padding: 20px 35px
+      margin-top: 20px
+    &-title
+      margin-top: -5px
+      font-size: 33px
+      font-weight: 700
+      &_small
+        font-size: 21px
+        font-weight: 400
+        margin-top: 10px
+    &-form
+      &__label 
+        font-size: 21px
+        margin-top: 40px
+        margin-bottom: 30px
+  .production
+    margin-top: -70px
+    margin-bottom: 100px
+    &-text
+      &__title
+        margin-left: -80px
+        padding-right: 30px
+        width: 130%
+        font-weight: 700
+        font-size: 23px
+        text-align: center
+      &__descr
+        max-width: 1000px
+        margin-top: -10px
+    &-slider_top
+      margin-top: 30px
+  .clients
+    margin-top: -250px
+  .features
+    .numbers
+      margin-top: -30px
+      &-block
+        margin-bottom: 20px
+    &-block
+      &__title
+        font-weight: 900
+        font-size: 17px
+        margin-left: -50px
+      &__descr
+        line-height: 1.5  
+        margin-left: -50px  
+      &s
+        flex-direction: column
+        margin-bottom: -30px
+      &__img
+        margin-left: 15px
+      margin-top: -20px
+    text-align: justify
+  .contacts
+    padding: 10px
+    margin-top: -155px
+    text-align: center
+    &-block 
+      margin-left: 20%
+      background: transparent
+      h2
+        color: $text-color-dark
+        font-size: 27px
+      &__title 
+        font-size: 21px
+        &_tel 
+          line-height: 1.8
+      button
+        font-size: 18px
+        padding: 20px 35px
+    .map
+      margin-top: 170px
+      &-img 
+        width: 95%
+  
+@media screen and (min-width : 768px) and ( max-width: 992px )
+  a
+    font-size: 13px
+    padding-right:  11px
+    padding-left: 5px
+  .header
+    &-contacts
+      &__phone
+        &s 
+          flex-direction: column
+        font-size: 20px
+        border: none
+        span
+          font-weight: 900
+        &:first-child
+          border: none
+  .overlay
+    .popup
+      top: 100px
+      width: 530px
+      &-form
+        &-header
+          line-height: 1.2
+          span 
+            font-weight: 300
+      button 
+        margin-top: 20px
+  .features
+    &-block 
+      min-width: 330px
+  .products
+    &-block 
+      &__img
+        &-two
+          margin-top: -10px
+        &-four
+          margin-top: 8px
+  .production
+    margin-bottom: -50px
+    margin-left: -60px
+    &-slider 
+      &_top
+        margin-bottom: -180px
+      &_bottom
+        height: 55px
+    &-text 
+      margin-right: -60px
+      margin-top: -80px
+      &__title
+        margin-left: 0
+        padding-left: 60px
+        width: 100%
+        
+
+
+   
+  
+
+@media screen and (min-width : 992px) and ( max-width: 1200px )
+  .production
+      &-slider 
+        &_top
+          margin-bottom: -80px
+      &-text 
+        &__title
+          width: 110%
+  a
+    font-size: 14px
+    padding-right:  20px
+    padding-left: 20px
+     
+@media screen and ( min-width: 768px )   
+  .need-hide 
+    display: none
+   
+
+
+ 
+       
+        
+    
+     
+
+      
+    
+
+
+   
+
+      
